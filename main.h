@@ -25,5 +25,6 @@ int (*get_func(const char *, int))(va_list);
 int print_str(va_list);
 int print_number(va_list);
 int print_char(va_list);
+int print_percent(va_list);
 
 #endif

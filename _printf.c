@@ -24,17 +24,19 @@ int _printf(const char *format, ...)
 			if (ptr_func == NULL)
 			{
 				_putchar('%');
-				count++, i++;
+				count++;
 			}
 			else
 			{
 				count += ptr_func(list);
 				i++;
 			}
-			continue;
 		}
-		_putchar(format[i]);
-		count++;
+		else
+		{
+			_putchar(format[i]);
+			count++;
+		}
 	}
 	return (count);
 }
