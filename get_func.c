@@ -2,7 +2,8 @@
 
 /**
  * get_func - gets a particular function
- * @c: the string
+ * @str: the string
+ * @id: the index / function
  *
  * Return: a pointer to the function
  */
@@ -10,7 +11,8 @@ int (*get_func(const char *str, int id))(va_list)
 {
 	prn fns[] = {
 		{"c", print_char}, {"d", print_number}, {"i", print_number},
-		{"s", print_str}, {"%", print_percent}, {NULL, NULL},
+		{"s", print_str}, {"%", print_percent}, {"b", print_bin},
+		{"o", print_octal}, {"u", print_unsigned_dec}, {NULL, NULL}
 	};
 	int i = 0, j = 0;
 

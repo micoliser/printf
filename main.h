@@ -22,9 +22,12 @@ typedef struct print
 int _putchar(char c);
 int _printf(const char *format, ...);
 int (*get_func(const char *, int))(va_list);
+int print_octal(va_list);
+int print_unsigned_dec(va_list);
 int print_str(va_list);
 int print_number(va_list);
 int print_char(va_list);
 int print_percent(va_list);
+int print_bin(va_list);
 
 #endif

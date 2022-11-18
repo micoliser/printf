@@ -12,7 +12,11 @@ int main(void)
 	putchar('\n');
 	printf("%d\n", count);
 
-	count = _printf("%s hahahsa", "Emiline");
+	count = _printf("%s hahahsa %b%o", "Emiline", 5, 80);
+	putchar('\n');
+	printf("%d\n", count);
+
+	count = _printf("%u %u", 80, -80);
 	putchar('\n');
 	printf("%d\n", count);
 

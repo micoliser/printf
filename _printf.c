@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list list;
-	int i, count = 0, num;
+	int i, count = 0;
 	int (*ptr_func)(va_list);
 
 	if (!format)

@@ -1,29 +1,23 @@
 #include "main.h"
 
 /**
- * print_number - prints an integer
+ * print_unsigned_dec - prints an unsigned integer
  * @args: arguments
  *
  * Return: count
  */
-int print_number(va_list args)
+int print_unsigned_dec(va_list args)
 {
-	int arr[100], i = 0, j, r, count = 0;
-	int num;
+	unsigned int arr[100], i = 0, r, count = 0;
+	int j;
+	unsigned int num;
 
-	num = va_arg(args, int);
+	num = va_arg(args, unsigned int);
 
 	if (num == 0)
 	{
 		_putchar('0');
 		return (1);
-	}
-
-	if (num < 0)
-	{
-		_putchar('-');
-		num = -num;
-		count++;
 	}
 
 	while (num != 0)
