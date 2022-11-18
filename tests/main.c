@@ -20,6 +20,10 @@ int main(void)
 	putchar('\n');
 	printf("%d\n", count);
 
+	count = _printf("%x %X", 546768, -12);
+	putchar('\n');
+	printf("%d\n", count);
+
 	count = _printf("%% hey %s", NULL);
 	putchar('\n');
 	printf("%d\n", count);

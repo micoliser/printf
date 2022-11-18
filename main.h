@@ -28,6 +28,8 @@ int print_str(va_list);
 int print_number(va_list);
 int print_char(va_list);
 int print_percent(va_list);
+int print_unsigned_hex(va_list);
+int print_unsigned_HEX(va_list);
 int print_bin(va_list);
 
 #endif
