@@ -26,16 +26,13 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '\0')
-			{
 				return (-1);
-			}
 
 			ptr_func = get_func(format, i + 1);
 			if (ptr_func == NULL)
 			{
 				_putchar('%');
 				count++;
-				
 			}
 			else
 			{

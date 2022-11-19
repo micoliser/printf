@@ -13,7 +13,7 @@ int print_number(va_list args)
 
 	num = va_arg(args, int);
 
-	if (num == 0)
+	if (num == 0 || !num)
 	{
 		_putchar('0');
 		return (1);
