@@ -8,7 +8,7 @@
  */
 int print_addr(va_list args)
 {
-	int i, n = 0;
+	int i;
 	char *str;
 	unsigned long int addr;
 	char null[] = "(nil)";
