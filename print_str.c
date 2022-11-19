@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_str - prints a string
+ * print_str - prints a string using a loop that also counts the characters
  * @args: arguments
  *
  * Return: count

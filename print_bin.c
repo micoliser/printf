@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_bin - prints a num in binary format
+ * print_bin - prints a num in binary format, div by 2 and stores rem in an arr
  * @args: arguments
  *
  * Return: count

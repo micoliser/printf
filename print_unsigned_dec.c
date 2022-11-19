@@ -20,6 +20,7 @@ int print_unsigned_dec(va_list args)
 		return (1);
 	}
 
+	/* continously divide the number by 10 and store it in arr */
 	while (num != 0)
 	{
 		r = num % 10;
@@ -29,6 +30,7 @@ int print_unsigned_dec(va_list args)
 		num /= 10;
 	}
 
+	/* prints the arr backwards, and returns the num of elements printed */
 	for (j = i - 1; j > -1; j--, count++)
 		_putchar(arr[j] + '0');
 
