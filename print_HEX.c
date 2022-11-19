@@ -26,7 +26,6 @@ int print_HEX(long int num, unsigned int size, unsigned int type)
 		num = num * -1;
 
 	hex = malloc(sizeof(int) * size);
-
 	for (i = 0; i < size; i++)
 		hex[i] = 0;
 
@@ -41,17 +40,12 @@ int print_HEX(long int num, unsigned int size, unsigned int type)
 	{
 		if (type != 0)
 			_putchar('0');
+
 		if (hex[r] < 10)
-		{
 			_putchar(hex[r] + '0');
-		}
 		else
-		{
 			_putchar((hex[r] % 10) + c);
-		}
 	}
-
 	free(hex);
-
 	return (p);
 }
