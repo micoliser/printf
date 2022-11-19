@@ -6,8 +6,10 @@ int main(void)
 	int len1, len2;
 	unsigned int ui;
 
-	count = _printf("%cat\\\t\\s\n", 'c');
-	printf("%d\n", count);
+	count = _printf("%b, %b, %b", 5, 0, -5);
+	printf("\n%d\n", count);
+	count = printf("%d, %i", "HI", "HI");
+	printf("\n%d\n", count);
 
 	count = _printf("Hello\tWorld. %s, with over %d candidates in C%x and %i total\n", NULL, NULL, 10, 12345);
 	printf("%d\n", count);
@@ -18,12 +20,12 @@ int main(void)
 	count = _printf("%cat\\\t\\s\n", 'c');
 	printf("%d\n", count);
 
+	ui = (unsigned int)INT_MAX + 1024;
 	len1 = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
-	ui = (unsigned int)INT_MAX + 1024;
-
 	_printf("Length:[%d, %i]\n", len1, len1);
 	printf("Length:[%d, %i]\n", len2, len2);
+
 	len1 = _printf("Negative:[%d]\n", -762534);
 	len2 = printf("Negative:[%d]\n", -762534);
 	_printf("Length:[%d, %i]\n", len1, len1);
