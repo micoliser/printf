@@ -10,11 +10,16 @@ int print_str(va_list args)
 {
 	int i;
 	char *str;
+	char *null = "(nil)";
 
 	str = va_arg(args, char *);
 
 	if (!str)
-		return (0);
+	{
+		for (i = 0; i < 5; i++)
+			_putchar(null[i]);
+		return (5);
+	}
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
