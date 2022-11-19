@@ -38,6 +38,8 @@ int print_str(va_list);
 int print_unsigned_dec(va_list);
 int print_unsigned_hex(va_list);
 int print_unsigned_HEX(va_list);
+int print_STR(va_list);
+void print_HEX(char);
 /* b, c, d & i, o, %, s, u, x, X */
 
 #endif
