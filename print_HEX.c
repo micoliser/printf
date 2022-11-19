@@ -10,7 +10,7 @@
 * then storing it in an array, and putting the remainder as 0-9 or A-F
 * Return: nothing
 */
-void print_HEX(long int num, unsigned int size, unsigned int type)
+int print_HEX(long int num, unsigned int size, unsigned int type)
 {
 	unsigned int p, i;
 	int *hex;
@@ -37,8 +37,10 @@ void print_HEX(long int num, unsigned int size, unsigned int type)
 	}
 
 	/* Prints the hex array */
-	for (r = size - 1; r >= 0; r--)
+	for (r = p - 1; r >= 0; r--)
 	{
+		if (type != 0)
+			_putchar('0');
 		if (hex[r] < 10)
 		{
 			_putchar(hex[r] + '0');
@@ -50,4 +52,6 @@ void print_HEX(long int num, unsigned int size, unsigned int type)
 	}
 
 	free(hex);
+
+	return (p);
 }

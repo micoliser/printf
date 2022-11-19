@@ -5,23 +5,26 @@ int main(void)
 	int count = 10;
 	int len1, len2;
 	unsigned int ui;
+	char c = 'H';
+	char *p = &c;
 
 	count = _printf("%S", "Hello\nWorld\t");
 	printf("\n%d\n", count);
-	count = _printf("%p", NULL);
+
+	count = _printf("%p, %p, %p, %p, %p, %p, %p, %p", &ui, &c, &count, p, &p, NULL, 111, -111);
+	printf("\n%d\n", count);
+	count = printf("%p, %p, %p, %p, %p, %p, %p, %p", &ui, &c, &count, p, &p, NULL, 111, -111);
 	printf("\n%d\n", count);
 	count = printf("%p", NULL);
 	printf("\n%d\n", count);
 
 	count = _printf("Hello\tWorld. %s, with over %d candidates in C%x and %i total\n", NULL, NULL, 10, 12345);
 	printf("%d\n", count);
-	count = printf("Hello\tWorld. %s, with over %d candidates in C%x and %i total\n", NULL, NULL, 10, 12345);
-	printf("%d\n", count);
 
 	count = _printf("Let's try to printf a simple sentence.\n%");
 	printf("%d\n", count);
 
-	count = _printf("%cat\\\t\\s\n", 'c');
+	count = _printf("%cat\\\t\\s\n", c);
 	printf("%d\n", count);
 
 	ui = (unsigned int)INT_MAX + 1024;

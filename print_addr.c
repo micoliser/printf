@@ -8,7 +8,7 @@
  */
 int print_addr(va_list args)
 {
-	int i;
+	int i, count;
 	void *str;
 	long int addr;
 	char null[] = "(nil)";
@@ -25,7 +25,7 @@ int print_addr(va_list args)
 
 	_putchar('0');
 	_putchar('x');
-	print_HEX(addr, 12, 0);
+	count = print_HEX(addr, 12, 0);
 
-	return (14);
+	return (2 + count);
 }
