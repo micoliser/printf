@@ -14,9 +14,9 @@ int _printf(const char *format, ...)
 	/* a function pointer, that accepts va_list as argument */
 	int (*ptr_func)(va_list);
 
-	/* Returns 0 if format is null */
+	/* Returns -1 if format is null */
 	if (!format)
-		return (0);
+		return (-1);
 
 	va_start(list, format);
 	for (i = 0; format[i] != '\0'; i++)
