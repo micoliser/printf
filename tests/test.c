@@ -1,4 +1,4 @@
-#include <stdio.h> 
+#include "../main.h"
 
 /**
  * 
@@ -11,7 +11,7 @@ int main(void)
 	int *p = &n;
 	int z;
 
-	printf("n: %p, p: %x, z: %p\n", &n, p, &z);
+	print_HEX(88399384332, 7);
 
 	return (0);
 }

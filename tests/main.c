@@ -6,9 +6,11 @@ int main(void)
 	int len1, len2;
 	unsigned int ui;
 
-	count = _printf("%S", NULL);
+	count = _printf("%S", "Hello\nWorld\t");
 	printf("\n%d\n", count);
-	count = _printf("%b, %b, %b", 5, 0, -5);
+	count = _printf("%p", &count);
+	printf("\n%d\n", count);
+	count = printf("%p", &count);
 	printf("\n%d\n", count);
 
 	count = _printf("Hello\tWorld. %s, with over %d candidates in C%x and %i total\n", NULL, NULL, 10, 12345);

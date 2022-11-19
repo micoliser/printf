@@ -18,7 +18,7 @@ int (*get_func(const char *str, int id))(va_list)
 		{"s", print_str}, {"%", print_percent}, {"b", print_bin},
 		{"o", print_octal}, {"u", print_unsigned_dec},
 		{"x", print_unsigned_hex}, {"X", print_unsigned_HEX},
-		{"S", print_STR}, {NULL, NULL}
+		{"S", print_STR}, {"p", print_addr}, {NULL, NULL}
 	};
 	int i = 0, j = 0;
 	/* ask why not directly 0 as .c[j] */

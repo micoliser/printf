@@ -39,7 +39,8 @@ int print_unsigned_dec(va_list);
 int print_unsigned_hex(va_list);
 int print_unsigned_HEX(va_list);
 int print_STR(va_list);
-void print_HEX(char);
+int print_addr(va_list);
+void print_HEX(unsigned long int, unsigned int, unsigned int);
 /* b, c, d & i, o, %, s, u, x, X */
 
 #endif
