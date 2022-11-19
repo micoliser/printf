@@ -17,6 +17,12 @@ int print_unsigned_hex(va_list args)
 	/* va_arg calls the argument provided and passes it as unsigned int */
 	num = va_arg(args, unsigned int);
 
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+
 	for (p = 0; num != 0; p++)
 	{
 		hex[p] = num % 16;

@@ -7,6 +7,8 @@ int main(void)
 	unsigned int ui;
 
 	count = _printf("%b, %b, %b", 5, 0, -5);
+	count = _printf("%b, %b, %b", 5, 0, -5);
+	count = _printf("%b, %b, %b", 5, 0, -5);
 	printf("\n%d\n", count);
 	count = printf("%d, %i", "HI", "HI");
 	printf("\n%d\n", count);
