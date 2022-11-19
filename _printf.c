@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
 	/* Declare a variable list, with its own argument(begins at va_start) */
 	va_list list;
-	int i, count = 0;
+	int i = 0, count = 0;
 	/* a function pointer, that accepts va_list as argument */
 	int (*ptr_func)(va_list);
 
