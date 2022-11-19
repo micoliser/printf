@@ -22,6 +22,9 @@ void print_HEX(long int num, unsigned int size, unsigned int type)
 	else
 		c = 'A';
 
+	if (num < 0)
+		num = num * -1;
+
 	hex = malloc(sizeof(int) * size);
 
 	for (i = 0; i < size; i++)
