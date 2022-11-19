@@ -8,12 +8,14 @@ int main(void)
 
 	count = _printf("%S", "Hello\nWorld\t");
 	printf("\n%d\n", count);
-	count = _printf("%p", &count);
+	count = _printf("%p", NULL);
 	printf("\n%d\n", count);
-	count = printf("%p", &count);
+	count = printf("%p", NULL);
 	printf("\n%d\n", count);
 
 	count = _printf("Hello\tWorld. %s, with over %d candidates in C%x and %i total\n", NULL, NULL, 10, 12345);
+	printf("%d\n", count);
+	count = printf("Hello\tWorld. %s, with over %d candidates in C%x and %i total\n", NULL, NULL, 10, 12345);
 	printf("%d\n", count);
 
 	count = _printf("Let's try to printf a simple sentence.\n%");
