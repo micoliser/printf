@@ -12,7 +12,7 @@ int main(void)
 	count = _printf("Hello\tWorld. %s, with over %d candidates in C%x and %i total\n", NULL, 4000, 10, 12345);
 	printf("%d\n", count);
 
-	count = _printf("Let's try to printf a simple sentence.\n");
+	count = _printf("Let's try to printf a simple sentence.\n%");
 	printf("%d\n", count);
 
 	count = _printf("%cat\\\t\\s\n", 'c');

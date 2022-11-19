@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	int (*ptr_func)(va_list);
 
 	/* Returns -1 if format is null */
-	if (!format)
+	if (!format || (format[i] == '%' && format[i + 1] == '\0'))
 		return (-1);
 	if (!format[i])
 		return (0);
@@ -25,11 +25,17 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\0')
+			{
+				return (-1);
+			}
+
 			ptr_func = get_func(format, i + 1);
 			if (ptr_func == NULL)
 			{
 				_putchar('%');
 				count++;
+				
 			}
 			else
 			{
