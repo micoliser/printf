@@ -10,7 +10,7 @@
 * then storing it in an array, and putting the remainder as 0-9 or A-F
 * Return: nothing
 */
-void print_HEX(unsigned long int num, unsigned int size, unsigned int type)
+void print_HEX(long int num, unsigned int size, unsigned int type)
 {
 	unsigned int p, i;
 	int *hex;

@@ -26,7 +26,7 @@ int print_STR(va_list args)
 		{
 			_putchar(92);
 			_putchar('x');
-			print_HEX((unsigned long int)str[i], 2, 1);
+			print_HEX((long int)str[i], 2, 1);
 			n += 3;
 		}
 		else

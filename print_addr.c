@@ -9,11 +9,11 @@
 int print_addr(va_list args)
 {
 	int i;
-	char *str;
-	unsigned long int addr;
+	void *str;
+	long int addr;
 	char null[] = "(nil)";
 
-	str = va_arg(args, char *);
+	str = va_arg(args, void *);
 	if (str == NULL)
 	{
 		for (i = 0; null[i] != '\0'; i++)
@@ -21,7 +21,7 @@ int print_addr(va_list args)
 		return (5);
 	}
 
-	addr = (unsigned long int)str;
+	addr = (long int)str;
 
 	_putchar('0');
 	_putchar('x');

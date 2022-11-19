@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	int count;
+	int count = 10;
 	int len1, len2;
 	unsigned int ui;
 
