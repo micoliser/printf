@@ -29,7 +29,8 @@ int (*get_func(const char *str, int id))(va_list)
 		{"lx", print_long_unsigned_hex}, {"hx", print_short_unsigned_hex},
 		{"lo", print_long_octal}, {"ho", print_short_octal},
 		{"S", print_STR}, {"p", print_addr}, {"#o", print_hash_octal},
-		{"#x", print_hash_hex}, {"#X", print_hash_HEX}, {NULL, NULL}
+		{"#x", print_hash_hex}, {"#X", print_hash_HEX}, {"r", print_rev},
+		{"R", print_rot13}, {NULL, NULL}
 	};
 	int i = 0, j = 0;
 	/* ask why not directly 0 as .c[j] */
