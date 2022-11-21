@@ -86,7 +86,7 @@ int print_short_unsigned_dec(va_list args)
 	short int j;
 	unsigned short int num;
 
-	num = va_arg(args, unsigned short int);
+	num = va_arg(args, unsigned int);
 
 	if (num == 0)
 	{

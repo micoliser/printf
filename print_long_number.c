@@ -49,7 +49,7 @@ int print_short_number(va_list args)
 	short int num;
 	short unsigned int num_t, temp, i, div = 1, count = 0;
 
-	num = va_arg(args, short int);
+	num = va_arg(args, int);
 	if (num < 0)
 	{
 		num_t = num * -1;

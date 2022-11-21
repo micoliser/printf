@@ -105,7 +105,7 @@ int print_short_unsigned_HEX(va_list args)
 	int r;
 
 	/* va_arg calls the argument provided and passes it as unsigned int */
-	num = va_arg(args, unsigned short int);
+	num = va_arg(args, unsigned int);
 
 	if (num == 0)
 	{
