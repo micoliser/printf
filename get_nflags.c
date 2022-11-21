@@ -22,7 +22,8 @@ int get_nflags(const char *str, int id)
 		{"s", print_str}, {"%", print_percent}, {"b", print_bin},
 		{"o", print_octal}, {"u", print_unsigned_dec},
 		{"x", print_unsigned_hex}, {"X", print_unsigned_HEX},
-		{"S", print_STR}, {"p", print_addr}, {NULL, NULL}
+		{"S", print_STR}, {"p", print_addr}, {"#o", print_hash_octal},
+		{"#x", print_hash_hex}, {"#X", print_hash_HEX}, {NULL, NULL}
 	};
 	int i = 0, j = 0;
 	/* ask why not directly 0 as .c[j] */
