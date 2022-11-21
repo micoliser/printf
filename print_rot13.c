@@ -10,7 +10,6 @@ int print_rot13(va_list args)
 {
 	int i, r;
 	char *str;
-	char null[] = "(null)";
 	char org[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char *rot13;
