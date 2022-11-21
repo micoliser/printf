@@ -32,6 +32,8 @@ int get_nflags(const char *, int);
 /* Conversion specifier function prototypes */
 int print_bin(va_list);
 int print_char(va_list);
+int print_rev(va_list);
+int print_rot13(va_list);
 int print_number(va_list);
 int print_plus_number(va_list);
 int print_space_number(va_list);
