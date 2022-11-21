@@ -13,6 +13,10 @@ int main(void)
 	printf("%d\n", count);
 	count = _printf("%s: %#o, %s: %#o, %s: %#x, %s: %#X\n", "Octal", 0, "Octal", -872, "hex", 'c', "HEX", 125);
 	printf("%d\n", count);
+	count = _printf("% d, %+d, %+ d, % +d\n", 790, 99, 200, -51);
+	printf("%d\n", count);
+	count = printf("% d, %+d, %+ d, % +d\n", 790, 99, 200, -51);
+	printf("%d\n", count);
 
 	return (0);
 }
