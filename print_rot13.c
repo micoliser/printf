@@ -16,14 +16,12 @@ int print_rot13(va_list args)
 	char *rot13;
 
 	str = va_arg(args, char *);
-	if (str == NULL)
+	rot13 = malloc(sizeof(char) * (strlen(str) + 1));
+	if (rot13 == NULL)
 	{
-		for (i = 0; null[i] != '\0'; i++)
-			_putchar(null[i]);
-		return (6);
+		return (0);
 	}
 
-	rot13 = malloc(sizeof(char) * (strlen(str) + 1));
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		if ((str[i] >= 65 && str[i] <= 90) || (str[i] >= 97 && str[i] <= 122))
