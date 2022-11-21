@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 			else
 			{
 				count += ptr_func(list);
-				i++;
+				i += get_nflags(format, i + 1);
 			}
 		}
 		else

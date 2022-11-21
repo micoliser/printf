@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * get_func - gets a particular function
+ * get_nflags - gets a particular function
  * @str: the string
  * @id: the index / function
  *
  * This function is called from the _printf function after % is encountered
  * It will return NULL if the char after % is not a specifier and just print %
  *
- * Return: a pointer to the function
+ * Return: number of characters to skip
  */
-int (*get_func(const char *str, int id))(va_list)
+int get_nflags(const char *str, int id)
 {
 	/* fns is an array of structs containing the format and its function */
 	prn fns[] = {
@@ -33,14 +33,11 @@ int (*get_func(const char *str, int id))(va_list)
 		/* comparing each struct in the array, checking its char c[j](c[0] */
 		while (fns[i].func != NULL)
 		{
-			/* if the id(next char after %) is the same as the char in fns[row].0 */
-			/* return the function pointer of that row */
-			/* str[id] is same as format[i+1] in _printf */
 			if (fns[i].c[j] == str[id])
 			{
 				if (fns[i].c[j + 1] == '\0')
 				{
-					return (fns[i].func);
+					return (j + 1);
 				}
 				else
 				{
@@ -52,7 +49,5 @@ int (*get_func(const char *str, int id))(va_list)
 			i++;
 		}
 	}
-
-	/* return Null if the format is null or the next char is not a specifier */
-	return (NULL);
+	return (0);
 }

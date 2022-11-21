@@ -8,7 +8,14 @@ int main(void)
 	char c = 'H';
 	char *p = &c;
 
-	count = _printf("%S", "Hello\nWorld\t");
+	printf("\n%d\n", count);
+	count = _printf("%s % d", "Hello\nWorld\t", 3);
+	printf("\n%d\n", count);
+	count = printf("%s % d", "Hello\nWorld\t", 3);
+	printf("\n%d\n", count);
+	count = _printf("%s % +d and %+ d %+d", "Hello", 3, 19, -21);
+	printf("\n%d\n", count);
+	count = printf("%s % +d and %+ d %+d", "Hello", 3, 19, -21);
 	printf("\n%d\n", count);
 
 	count = _printf("%p, %p, %p, %p, %p, %p, %p, %p", &ui, &c, &count, p, &p, NULL, 111, -111);

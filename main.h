@@ -27,11 +27,14 @@ int _printf(const char *format, ...);
 
 /* returns a pointer to the function to execute using structs */
 int (*get_func(const char *, int))(va_list);
+int get_nflags(const char *, int);
 
 /* Conversion specifier function prototypes */
 int print_bin(va_list);
 int print_char(va_list);
 int print_number(va_list);
+int print_plus_number(va_list);
+int print_space_number(va_list);
 int print_octal(va_list);
 int print_percent(va_list);
 int print_str(va_list);
