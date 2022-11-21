@@ -21,7 +21,7 @@ int print_addr(va_list args)
 		return (5);
 	}
 
-	addr = (long int)str;
+	addr = (intptr_t)str;
 
 	_putchar('0');
 	_putchar('x');
