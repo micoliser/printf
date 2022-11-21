@@ -9,5 +9,10 @@ int main(void)
 	count = printf("%s: %#o, %s: %#o, %s: %#x, %s: %#X\n", "Octal", 0120, "Octal", 120, "hex", 120, "HEX", 120);
 	printf("%d\n", count);
 
+	count = _printf("%s: %#o, %s: %#o, %s: %#x, %s: %#X\n", "Octal", 0, "Octal", -872, "hex", 'c', "HEX", 125);
+	printf("%d\n", count);
+	count = _printf("%s: %#o, %s: %#o, %s: %#x, %s: %#X\n", "Octal", 0, "Octal", -872, "hex", 'c', "HEX", 125);
+	printf("%d\n", count);
+
 	return (0);
 }
