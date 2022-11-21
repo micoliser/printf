@@ -47,7 +47,7 @@ int print_long_number(va_list args)
 int print_short_number(va_list args)
 {
 	short int num;
-	short unsigned int num_t, temp, i, div = 1, count = 0;
+	unsigned short int num_t, temp, i, div = 1, count = 0;
 
 	num = va_arg(args, int);
 	if (num < 0)
