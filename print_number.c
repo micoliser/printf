@@ -59,6 +59,8 @@ int print_plus_number(va_list args)
 	else
 	{
 		num_t = num;
+		_putchar('+');
+		count++;
 	}
 
 	temp = num_t;
@@ -69,11 +71,6 @@ int print_plus_number(va_list args)
 		temp /= 10;
 	}
 
-	if (count == 0)
-	{
-		_putchar('+');
-		count++;
-	}
 	for (i = 0; div > 0; div /= 10, i++, count++)
 	{
 		_putchar(((num_t / div) % 10) + '0');
@@ -102,6 +99,8 @@ int print_space_number(va_list args)
 	else
 	{
 		num_t = num;
+		_putchar(' ');
+		count++;
 	}
 
 	temp = num_t;
@@ -110,11 +109,6 @@ int print_space_number(va_list args)
 	{
 		div *= 10;
 		temp /= 10;
-	}
-	if (count == 0)
-	{
-		_putchar(' ');
-		count++;
 	}
 
 	for (i = 0; div > 0; div /= 10, i++, count++)
