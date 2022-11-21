@@ -36,7 +36,7 @@ int print_rot13(va_list args)
 		}
 		else
 		{
-			rot13[i] = str[i];			
+			rot13[i] = str[i];
 		}
 	}
 	rot13[i] = '\0';
