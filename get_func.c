@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * get_func - gets a particular function
+ * get_func - selects the handler for a specifier
  * @str: the string
- * @id: the index / function
+ * @id: the index of the element after % symbol
  *
  * This function is called from the _printf function after % is encountered
  * It will return NULL if the char after % is not a specifier and just print %
  *
- * Return: a pointer to the function
+ * Return: a pointer to the function that handles the specifier, or NULL if
  */
 int (*get_func(const char *str, int id))(va_list)
 {
-	/* fns is an array of structs containing the format and its function */
+	/* fns is a struct array containing the specifier and its function */
 	prn fns[] = {
 		{"c", print_char}, {"d", print_number}, {" d", print_space_number},
 		{"+d", print_plus_number}, {"+ d", print_plus_number},
@@ -33,17 +33,12 @@ int (*get_func(const char *str, int id))(va_list)
 		{"R", print_rot13}, {NULL, NULL}
 	};
 	int i = 0, j = 0;
-	/* ask why not directly 0 as .c[j] */
 
-	/* If str(or format) is not NULL, check for the function */
 	if (str)
 	{
-		/* comparing each struct in the array, checking its char c[j](c[0] */
+		/* comparing each fns.c to the characters after % */
 		while (fns[i].func != NULL)
 		{
-			/* if the id(next char after %) is the same as the char in fns[row].0 */
-			/* return the function pointer of that row */
-			/* str[id] is same as format[i+1] in _printf */
 			if (fns[i].c[j] == str[id])
 			{
 				if (fns[i].c[j + 1] == '\0')
@@ -60,7 +55,6 @@ int (*get_func(const char *str, int id))(va_list)
 			i++;
 		}
 	}
-
 	/* return Null if the format is null or the next char is not a specifier */
 	return (NULL);
 }

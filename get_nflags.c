@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * get_nflags - gets a particular function
- * @str: the string
- * @id: the index / function
+ * get_nflags - gets the number of flags encountered in the function
+ * @str: the string (format)
+ * @id: the index of char after %
  *
  * This function is called from the _printf function after % is encountered
- * It will return NULL if the char after % is not a specifier and just print %
+ * It will return the number of flags it encounters before a format specifier
  *
- * Return: number of characters to skip
+ * Return: number of flags and specifier, or 0
  */
 int get_nflags(const char *str, int id)
 {
@@ -31,7 +31,7 @@ int get_nflags(const char *str, int id)
 		{"#x", print_hash_hex}, {"r", print_rev}, {NULL, NULL}
 	};
 	int i = 0, j = 0;
-
+	/* counts the flags and returns the number, + c will return 3 */
 	if (str)
 	{
 		while (fns[i].func != NULL)

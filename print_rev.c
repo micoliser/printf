@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_rev - prints a string using a loop that also counts the characters
+ * print_rev - prints a string n reverse and also counts the characters
  * @args: arguments
  *
  * Return: count

@@ -25,7 +25,7 @@ typedef struct print
 int _putchar(char c);
 int _printf(const char *format, ...);
 
-/* returns a pointer to the function to execute using structs */
+/* returns a function and flag number */
 int (*get_func(const char *, int))(va_list);
 int get_nflags(const char *, int);
 
@@ -59,6 +59,6 @@ int print_str(va_list);
 int print_STR(va_list);
 int print_rev(va_list);
 int print_rot13(va_list);
-/* b, c, d & i, o, %, s, u, x, X */
+/* b, c, d & i, o, %, p, r, R, s, S, u, x, X */
 
 #endif

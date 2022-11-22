@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_rot13 - prints a string using a loop that also counts the characters
+ * print_rot13 - prints a rot13'd string, non letetrs are left as is
  * @args: arguments
  *
- * Return: count
+ * Return: count(i)
  */
 int print_rot13(va_list args)
 {

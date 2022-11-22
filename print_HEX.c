@@ -17,6 +17,7 @@ int print_HEX(long int num, unsigned int size, unsigned int type)
 	int r;
 	char c;
 
+	/* Type 0 for lowercase, else upper */
 	if (type == 0)
 		c = 'a';
 	else

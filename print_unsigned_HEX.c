@@ -136,7 +136,7 @@ int print_short_unsigned_HEX(va_list args)
 }
 
 /**
- * print_hash_HEX - prints an unsigned hexadecimal
+ * print_hash_HEX - prints an unsigned hexadecimal with the 0X
  * @args: arguments
  *
  * prints an hexadecimal number from an int by continously dividing it by 16

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_addr - prints the address of a variable
+ * print_addr - prints the address of a variable in hex format
  * @args: arguments
  *
  * Return: count
@@ -22,7 +22,6 @@ int print_addr(va_list args)
 	}
 
 	addr = (intptr_t)str;
-
 	_putchar('0');
 	_putchar('x');
 	count = print_HEX(addr, 12, 0);

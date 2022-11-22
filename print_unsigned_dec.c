@@ -50,13 +50,11 @@ int print_long_unsigned_dec(va_list args)
 	unsigned long int num;
 
 	num = va_arg(args, unsigned long int);
-
 	if (num == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
-
 	/* continously divide the number by 10 and store it in arr */
 	while (num != 0)
 	{
@@ -66,7 +64,6 @@ int print_long_unsigned_dec(va_list args)
 
 		num /= 10;
 	}
-
 	/* prints the arr backwards, and returns the num of elements printed */
 	for (j = i - 1; j > -1; j--, count++)
 		_putchar(arr[j] + '0');
@@ -87,13 +84,11 @@ int print_short_unsigned_dec(va_list args)
 	unsigned short int num;
 
 	num = va_arg(args, unsigned int);
-
 	if (num == 0)
 	{
 		_putchar('0');
 		return (1);
 	}
-
 	/* continously divide the number by 10 and store it in arr */
 	while (num != 0)
 	{
@@ -103,7 +98,6 @@ int print_short_unsigned_dec(va_list args)
 
 		num /= 10;
 	}
-
 	/* prints the arr backwards, and returns the num of elements printed */
 	for (j = i - 1; j > -1; j--, count++)
 		_putchar(arr[j] + '0');
